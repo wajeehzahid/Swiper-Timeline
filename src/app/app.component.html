@@ -7,11 +7,16 @@
 
 
       <swiper class="swiper-container"
-              [slidesPerView]="3"
+              [slidesPerView]="1"
               [grabCursor]= "true"
               [navigation]="true"
               [pagination]="{ clickable: true }"
               [autoHeight]="true"
+              [breakpoints]="{
+                  '600': {
+                      slidesPerView: 3
+                  }
+              }"
       >
         <div class="swiper-wrapper timeline">
           <ng-template swiperSlide *ngFor="let slide of slideData">
